@@ -1,0 +1,421 @@
+.widget {
+    margin: 0 0 1.5em;
+
+    /* Make sure select elements fit in widgets. */
+    select {
+        
+    }
+}
+
+.widget-recent-post-thumbnail {
+    .recent-post-thumbnail-item {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 20px;
+        .recent-post-img {
+            max-width: 70px;
+            width: 50%;
+            img {
+                border-radius: 5px;
+            }
+        }
+        .recent-post-content {
+            padding-left: 10px;
+        }
+    }
+}
+
+
+// Search form.
+.search-form,
+.woocommerce-product-search {
+    position: relative; 
+    &:after{
+        content: "\f002";
+        position: absolute;
+        font-family: 'FontAwesome';
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        @include flex-center;
+    }
+
+    input,
+    .form-comment label textarea,
+    .form-comment label .search-form textarea {
+        padding-left: 20px;
+        width: 100%;
+        height: 40px;
+        background-color: $color__border-input;
+    }
+    .search-submit,
+    button {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        right: 0;
+        font-size: 0 !important;
+        border: none !important;
+        z-index: 5;
+        background: transparent !important;
+    }
+}
+    
+
+
+.widget_archive,
+.widget_categories,
+.widget_product_categories,
+.widget_pages,
+.widget_meta,
+.widget_nav_menu {
+    li{
+        list-style-type: disc;
+        list-style-position: inside;
+        +li{
+            border-top: 1px dotted #e2e2e2;
+        }
+        a {
+            text-transform: capitalize;
+            margin-right: 20px;
+            font-weight: 700;
+            padding: 10px 0;
+            display: inline-block;
+        }
+    }
+    .children{
+        li{
+            border-top: 1px dotted #e2e2e2;
+        }
+    }
+}
+
+/* Widget */
+
+#sidebar {
+    margin-top: 50px;
+    float: right;
+    .widget {
+        margin-bottom: 45px;
+    }
+}
+
+.widget-title {
+    font-family: $font__tittle;
+    font-size: 24px;
+    color: $color__text-screen;
+    position: relative;
+    &:after {
+        content: '';
+        height: 3px;
+        width: 60px;
+        position: absolute;
+        background-color: #14f1e4;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+    }
+}
+
+.tagcloud {
+    a {
+        padding: 5px;
+        border: 1px solid $color__border-button;
+        text-align: center;
+        padding: 3px 23px;
+        display: inline-block;
+        margin: 5px 5px;
+        &:hover {
+            border: 1px solid $color__link-hover;
+        }
+    }
+}
+
+/* Contact Form 7 for Subscribe Widget */
+.wpcf7-form {
+    p {
+        label br{
+            display: none;
+        }
+    }
+    .wpcf7-form-control-wrap {
+        input {
+            padding-left: 20px;
+            width: 100%;
+            height: 40px;
+            background-color: $color__border-input;
+        }
+    }
+    .button-submit {
+        width: 100%;
+        height: 40px;
+        text-transform: uppercase;
+    }
+}
+
+.widgettitle,
+.title-widget {
+    color: $color__text-widgettitle;
+    font-size: 14px;
+    font-family: $font__tittle;
+}
+
+.widgettitle {
+    font-size: 20px;
+}
+
+//
+.widget_recent_reviews {
+    img {
+        width: 33%;
+    }
+}
+
+// our-blog.
+.our-blog {
+    .blog-post-img {
+        position: relative;
+    }
+    .blog-info {
+        position: absolute;
+        bottom: 71px;
+        right: 15px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        align-items: center;
+        background-color: #fff;
+
+        .blog-date,
+        .blog-author {
+            float: left;
+            padding: 0 18px;
+            span {
+                margin-right: 10px;
+                &:before {
+                    color: #14f1e4;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .blog-date {
+            border-right: 1px solid #ddd;
+        }
+    }
+
+    .blog-title {
+        a {
+            font-size: 20px;
+            font-family: $font__tittle;
+            font-weight: bold;
+        }
+    }
+}
+
+// Counter Widget.
+.elementor-widget-container{
+    .counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .counter-image {
+            margin-right: 30px;
+            img {
+                max-width: 80px;
+            }
+        }
+        .counter-info {            
+            .counter_number {
+                font-size: 36px;
+                font-family: $font__tittle;
+                font-weight: bold;
+                color: #152639;
+            }
+        }
+    }
+}
+
+// Intro Widget.
+.intro {
+    position: relative;
+    overflow: hidden;
+    margin-right: 30px;
+    &:hover .info-intro {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.image-intro {
+}
+
+.info-intro {
+    position: absolute;
+    bottom: -65px;
+    left: 30px;
+    width: 100%;
+    background-color: rgba( 21, 38, 57, 0.9);
+    padding: 20px;
+    transition-duration: 0.3s;
+    .intro-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        i {
+            margin-right: 15px;
+            &:before {
+                color: #14f1e4;
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+// Widget contact form
+.widget-firstname,
+.widget-phonenumber {
+    width: 49%;
+    float: left;
+    margin-bottom: 2%;
+    .your-name input,
+    .your-telephone input {
+        background-color: #fff;
+    }
+}
+.widget-firstname {
+    margin-right: 2%;
+}
+
+.widget-button .button-submit {
+    width: 49%;
+    float: left;
+    height: 40px;
+    background: #152639 !important;
+    border: none !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    font-family: $font__tittle;
+    font-weight: bold;
+    &:hover {
+        color: #152639 !important;
+        background-color: #fff !important;
+        border: 1px solid #152639 !important;
+    }
+}
+
+// finazi-testimonial.
+.finazi-content-testimonial {
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+.finazi-content-testimonial {
+    position: relative;
+    background: #fff;
+    border: 5px solid #ddd;
+    &:after,
+    &:before {
+        top: 100%;
+        left: 10%;
+        border: 5px solid #ddd;
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+}    
+
+.finazi-content-testimonial:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 12px;
+    margin-left: -12px;
+}
+.finazi-content-testimonial:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 19px;
+    margin-left: -19px;
+}
+
+// video-popup.
+.video-popup {
+    text-align: center;
+}
+.js-modal-btn {
+    img {
+        cursor: pointer;
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+            transform: scale( 1.5, 1.5 );
+        }
+    }
+}
+
+// testimonial.
+.testimonial-carousel {
+    width: 90% !important;
+}
+.elementor-description {
+    padding: 30px;
+    float: left;
+    width: 100%;
+    font-family: 'Open Sans';
+}
+.elementor-description {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.1);
+ 
+    &:after,
+    &:before {
+        top: 100%;
+        left: 10%;
+        border: solid transparent;
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+}
+.elementor-description:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
+}
+.elementor-description:before {
+    border-color: rgba(221, 221, 221, 0);
+    border-top-color: #ddd;
+    border-width: 11px;
+    margin-left: -11px;
+}
+
+.elementor-image {
+    float: left;
+    display: block;
+    margin: 20px;
+}
+.elementor-repeater-info {
+    float: left;
+    margin: 30px;
+    .elementor-name {
+        font-family: $font__tittle;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .elementor-position {
+        font-size: 13px;
+        font-family: 'Open Sans';
+    }
+}

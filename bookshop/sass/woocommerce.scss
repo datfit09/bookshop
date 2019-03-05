@@ -1,0 +1,53 @@
+/*
+Theme Name: finazi
+
+WooCommerce styles override
+*/
+
+/**
+ * WooCommerce color variables
+ */
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #fff;
+$woocommerce__color-info: #fff;
+
+/**
+ * Imports
+ */
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/**
+ * Shop tables
+ */
+@import "shop/tables";
+
+/**
+ * Products
+ */
+@import "shop/products";
+
+/**
+ * Single product
+ */
+@import "shop/single-product";
+
+/**
+ * Checkout
+ */
+@import "shop/checkout";
+
+/**
+ * General WooCommerce components
+ */
+@import "shop/components";
+
+/**
+ * WooCommerce widgets
+ */
+@import "shop/widgets";
+
+/**
+ * Cart page
+ */
+@import "shop/cart-page";

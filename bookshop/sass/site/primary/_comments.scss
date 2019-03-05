@@ -1,0 +1,195 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	display: block;
+}
+
+/* Comment */
+
+.about-author {
+    a {
+        color: #5d5d5d;
+        font-size: 12px;
+        transition-duration: 0.3s;
+        text-decoration: underline;
+    }
+}
+
+#cancel-comment-reply-link {
+    font-size: 10px;
+    color: #c3c3c3;
+}
+
+.comments-area {
+    border-bottom: 1px solid #aeaeae;
+}    
+.comment-list .comment-item, .comment-list .comment-item .comment-con {
+    border: none;
+}
+.comment-list .comment-item .comment-con {
+    padding-left: 30px;
+    padding-bottom: 0;
+}
+
+.comment-list .comment-item .comment-text {
+    color: #000;
+    margin-bottom: 30px;
+}
+    
+.comment-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+    padding: 15px 0;
+}
+
+.comment-reply-title{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+.comment-form-author label , .comment-form-email label , .comment-form-url label{
+    color: #aeaeae;
+    width: 100px;
+    padding-bottom: 27px;
+    position: absolute;
+}    
+.comment-form-author , .comment-form-email , .comment-form-url {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+}
+.comment-form-author input, .comment-form-author textarea, .comment-form-email input , .comment-form-email textarea , .comment-form-url input, .comment-form-url textarea {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px dotted #dddddd;
+    width: 100%;
+}
+.comment-form-comment textarea {
+    margin-top: 10px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 90px;
+    border-bottom: 1px dotted #dddddd;
+    margin-bottom: 20px;
+}
+.comment-form-comment label {
+    color: #aeaeae;
+}
+.comment-notes{
+    display: none;
+}
+
+.form-submit .submit {
+    line-height: 24px;
+    padding: 11px 42px;
+    border: none;
+    background-color: $color__background-button;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.form-submit .submit:hover {
+    color: $color__link-hover;
+    font-weight: bold;
+    background-color: $color__background-pre;
+}
+    
+.comment-form{
+    margin-bottom: 100px;
+}
+
+.comment-form-url {
+    display: none;
+}
+.says {
+    display: none;
+}
+
+.comment-total-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 30px 0 15px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.comment-edit-link {
+    padding: 3px 13px;
+}
+
+.comment-author{
+    float: left;
+    width: 100px;
+}
+
+.comment-text {
+    width: 100%;
+    p {
+        padding: 20px 0 20px 20px;
+        color: #6c6c6c;
+        background-color: #f6f6f6;
+    }
+}    
+
+
+.comment-body {
+    position: relative;
+    .comment-meta {
+        .vcard {
+            width: 100%;
+            img {
+                display: block;
+                float: left;
+                border-radius: 50%;
+                width: 80px;
+                margin-right: 20px;
+            }
+            .fn {
+                text-transform: uppercase;
+                clear: both;
+            }
+        }
+
+        .comment-metadata {
+            position: absolute;
+            content: '';
+            top: 75px;
+            left: 100px;
+            a {
+                color: $color__text-main;
+            }
+        }
+    }
+
+    .reply {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 75px;
+        .comment-reply-link{
+        }
+    }
+
+    .comment-content {
+        margin-top: 20px;
+        margin-left: 100px;
+        padding: 30px;
+        background-color: $color__background-hr;
+        border: 1px solid $color__border-button;
+        border-radius: 3px;
+        display: block;
+        clear: both;
+        &:hover {
+            background-color: $color__background-pre;
+            border-color: $color__border-button-hover;
+        }
+    }
+}

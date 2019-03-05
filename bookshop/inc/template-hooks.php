@@ -1,0 +1,1 @@
+<?php add_action( 'finazi_posted', 'finazi_posted_on', 10 );add_action( 'finazi_posted', 'finazi_posted_by', 20 );add_action( 'finazi_posted', 'finazi_posted_comment', 30 );add_action( 'finazi_posted', 'finazi_posted_social', 40 );?>
