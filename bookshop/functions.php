@@ -34,7 +34,6 @@ function finazi( $wp_customize ) {
 }
 add_action( 'customize_register', 'finazi' );
 
-
 if ( ! function_exists( 'finazi_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
