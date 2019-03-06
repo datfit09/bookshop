@@ -194,6 +194,10 @@
         .blog-author {
             float: left;
             padding: 0 18px;
+            font-size: 12px;
+            a {
+                font-size: 12px;
+            }
             span {
                 margin-right: 10px;
                 &:before {
@@ -417,5 +421,58 @@
     .elementor-position {
         font-size: 13px;
         font-family: 'Open Sans';
+    }
+}
+
+// Service.
+.service-box {
+    background-color: #1d3044;
+    width: 270px;
+    padding: 40px 20px 20px 20px;
+    float: left;
+    margin: 80px 0 !important;
+}
+
+// counter-reset.
+.service_item {
+    counter-reset: section;
+}
+.service-box {
+    counter-increment: section;
+}
+.counter-service {
+    float: left;
+    margin-top: 50px;
+}
+.service-box .counter-service:before {
+    content: '0'counter(section) '. ';
+    font-family: $font__tittle;
+    font-weight: bold;
+    font-size: 72px;
+}
+
+.slick-track {
+    min-width: 270px;
+}
+.service-title {
+    float: left;
+    @include flex-center;
+    img {
+        margin-right: 20px;
+    }
+}
+.excerpt-service {
+    float: left;
+    clear: both;
+    word-wrap: break-word;
+}
+
+/* Arrows */
+.author_item button.slick-prev.slick-prev,
+.author_item button.slick-next.slick-arrow {
+    display: none !important;
+    border: none;
+    &:before {
+        display: none !important;
     }
 }

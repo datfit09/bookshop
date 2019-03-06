@@ -409,6 +409,23 @@ if ( ! function_exists( 'finazi_pagination' ) ) {
     }
 }
 
+// Function col.
+if ( ! function_exists( 'finazi_col' ) ) {
+    function finazi_col() {
+        $col = '';
+        $is_elementor_page = get_post_meta( get_the_ID(), '_elementor_edit_mode', true ); 
+        if ( class_exists( 'woocommerce' ) && is_active_sidebar( 'shop-widget' ) & ( is_shop() || is_product_category() || is_product_tag() || is_product() ) ) { 
+            $col = 'col-md-8';
+        } elseif ( class_exists( 'woocommerce' ) && is_checkout() ) {
+            $col = '';
+        } elseif ( 'builder' === $is_elementor_page ) {
+            $col = '';
+        } elseif ( is_active_sidebar( 'main-sidebar' ) ) { 
+            $col = 'col-md-8';
+        }
+    }
+}
+
 if ( defined( 'ELEMENTOR_VERSION' ) ) {
     require_once THEME_DIR . 'inc/elementor.php';
 }

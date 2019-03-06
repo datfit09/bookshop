@@ -1,13 +1,5 @@
 <?php
-$col = '';
-if ( class_exists( 'woocommerce' ) && is_active_sidebar( 'shop-widget' ) & ( is_shop() || is_product_category() || is_product_tag() || is_product() ) ) { 
-    $col = 'col-md-8';
-} elseif ( class_exists( 'woocommerce' ) && is_checkout() ) {
-    $col = '';
-} elseif ( is_active_sidebar( 'main-sidebar' ) ) {
-    $col = 'col-md-8';
-}
-
+finazi_col();
 get_header();
 ?>
 

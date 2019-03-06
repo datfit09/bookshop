@@ -2175,6 +2175,12 @@ a:hover, a:active {
 .our-blog .blog-info .blog-author {
   float: left;
   padding: 0 18px;
+  font-size: 12px;
+}
+
+.our-blog .blog-info .blog-date a,
+.our-blog .blog-info .blog-author a {
+  font-size: 12px;
 }
 
 .our-blog .blog-info .blog-date span,
@@ -2405,6 +2411,67 @@ a:hover, a:active {
 .elementor-repeater-info .elementor-position {
   font-size: 13px;
   font-family: 'Open Sans';
+}
+
+.service-box {
+  background-color: #1d3044;
+  width: 270px;
+  padding: 40px 20px 20px 20px;
+  float: left;
+  margin: 80px 0 !important;
+}
+
+.service_item {
+  counter-reset: section;
+}
+
+.service-box {
+  counter-increment: section;
+}
+
+.counter-service {
+  float: left;
+  margin-top: 50px;
+}
+
+.service-box .counter-service:before {
+  content: "0" counter(section) ". ";
+  font-family: Source Sans Pro;
+  font-weight: bold;
+  font-size: 72px;
+}
+
+.slick-track {
+  min-width: 270px;
+}
+
+.service-title {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-title img {
+  margin-right: 20px;
+}
+
+.excerpt-service {
+  float: left;
+  clear: both;
+  word-wrap: break-word;
+}
+
+/* Arrows */
+.author_item button.slick-prev.slick-prev,
+.author_item button.slick-next.slick-arrow {
+  display: none !important;
+  border: none;
+}
+
+.author_item button.slick-prev.slick-prev:before,
+.author_item button.slick-next.slick-arrow:before {
+  display: none !important;
 }
 
 /*--------------------------------------------------------------
