@@ -759,7 +759,7 @@ html[xmlns] .container {
 
 body {
   font-size: 14px;
-  word-wrap: break-word;
+  word-break: break-word;
   overflow-x: hidden;
 }
 
@@ -2237,14 +2237,30 @@ a:hover, a:active {
   left: 0;
 }
 
+.image-intro img {
+  display: block;
+}
+
 .info-intro {
   position: absolute;
-  bottom: -65px;
+  bottom: -70px;
   left: 30px;
   width: 100%;
   background-color: rgba(21, 38, 57, 0.9);
   padding: 20px;
   transition-duration: 0.3s;
+}
+
+@media (max-width: 375px) {
+  .info-intro {
+    bottom: -90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .info-intro {
+    bottom: -90px;
+  }
 }
 
 .info-intro .intro-title {
@@ -2421,6 +2437,13 @@ a:hover, a:active {
   margin: 80px 0 !important;
 }
 
+@media (max-width: 375px) {
+  .service-box {
+    width: 100% !important;
+    margin: 15px 0 15px 15px !important;
+  }
+}
+
 .service_item {
   counter-reset: section;
 }
@@ -2450,10 +2473,16 @@ a:hover, a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 
-.service-title img {
-  margin-right: 20px;
+.service-title a {
+  font-size: 20px;
+}
+
+.service-title a img {
+  margin-right: 40px;
+  padding-right: 20px;
 }
 
 .excerpt-service {

@@ -256,17 +256,25 @@
     }
 }
 
-.image-intro {
+.image-intro img {
+    display: block;
 }
 
 .info-intro {
     position: absolute;
-    bottom: -65px;
+    bottom: -70px;
     left: 30px;
     width: 100%;
     background-color: rgba( 21, 38, 57, 0.9);
     padding: 20px;
     transition-duration: 0.3s;
+    @media( max-width: 375px ) {
+        bottom: -90px;
+    }
+    @media( max-width: 1024px ) {
+        bottom: -90px;
+    }
+
     .intro-title {
         display: flex;
         flex-direction: row;
@@ -431,6 +439,10 @@
     padding: 40px 20px 20px 20px;
     float: left;
     margin: 80px 0 !important;
+    @media( max-width: 375px ) {
+        width: 100% !important;
+        margin: 15px 0 15px 15px !important;
+    }
 }
 
 // counter-reset.
@@ -457,9 +469,15 @@
 .service-title {
     float: left;
     @include flex-center;
-    img {
-        margin-right: 20px;
+    color: #fff;
+    a {
+        font-size: 20px;
+        img {
+            margin-right: 40px;
+            padding-right: 20px;
+        }
     }
+    
 }
 .excerpt-service {
     float: left;
