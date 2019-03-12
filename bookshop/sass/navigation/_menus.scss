@@ -3,6 +3,12 @@
     align-items: center;
     .site-branding {
         flex-grow: 1;
+        img {
+            @media( max-width: 375px ) {
+                max-width: 120px;
+                padding: 10px 0;
+            }
+        }
     }
 }
 
@@ -226,10 +232,9 @@
         display: block;
         clear: both;
     }
-
     .site-branding {
         display: block;
-        padding: 20px 0 40px 0;
+        padding: 0;
     }
 
     #pull {
@@ -250,16 +255,32 @@
     width: 24px;
     float: left;
     button {
-        border: 1px solid #152639;
-        color: #fff;
-        background-color: #152639;
-        border-radius: 3px;
+        margin-left: 30px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
         text-align: center;
-        @include flex-center;
+        background: #152639;
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+        border-radius: 3px;
         &:hover {
-            background-color: #fff;
-            color: #152639;
+            background-color: #14f1e4;
+            color: #fff;
         }
+    }
+    @media( max-width: 768px ) {
+        position: absolute;
+        top: 20%;
+        right: 90px;
+        display: block;
+        clear: both;
+    }
+    @media( max-width: 375px ) {
+        top: 37%;
     }
 }
 

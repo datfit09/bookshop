@@ -176,19 +176,19 @@
 
 // our-blog.
 .our-blog {
-    .blog-post-img {
+    .sc-blog-image{
         position: relative;
+        overflow: hidden;
     }
     .blog-info {
         position: absolute;
-        bottom: 71px;
-        right: 15px;
-        height: 55px;
+        right: 0;
+        bottom: 0;
+        background: #ffffff;
+        color: #6c6c6c;
         display: flex;
-        justify-content: center;
-        width: 70%;
+        height: 55px;
         align-items: center;
-        background-color: #fff;
 
         .blog-date,
         .blog-author {
@@ -376,6 +376,9 @@
 // testimonial.
 .testimonial-carousel {
     width: 90% !important;
+    @media( min-width: 375px ) {
+        width: 100%;
+    }
 }
 .elementor-description {
     padding: 30px;
@@ -438,16 +441,24 @@
     width: 270px;
     padding: 40px 20px 20px 20px;
     float: left;
-    margin: 80px 0 !important;
+    margin: 80px 0;
     @media( max-width: 375px ) {
-        width: 100% !important;
-        margin: 15px 0 15px 15px !important;
+        margin: 0 0 0 12px !important;
     }
 }
 
 // counter-reset.
 .service_item {
     counter-reset: section;
+    @media( max-width: 375px ){
+        button.slick-next.slick-arrow {
+            display: none !important;
+            border: none !important;
+            &:before {
+                display: none !important;
+            }
+        }
+    }
 }
 .service-box {
     counter-increment: section;
@@ -489,8 +500,37 @@
 .author_item button.slick-prev.slick-prev,
 .author_item button.slick-next.slick-arrow {
     display: none !important;
-    border: none;
+    border: none !important;
     &:before {
         display: none !important;
+    }
+}
+
+/* Dots Service Widget*/
+.service_item {
+    .slick-dots {
+        bottom: -15%;
+        flex-direction: row;
+        width: 70%;
+
+         li {
+            margin: 5px;
+        }
+    }
+}
+
+
+/* Dots Testimonial Widget*/
+@media( max-width: 375px ) {
+    .author_item {
+        .slick-dots {
+            bottom: -8%;
+            flex-direction: row;
+            width: 60%;
+
+             li {
+                margin: 5px;
+            }
+        }
     }
 }

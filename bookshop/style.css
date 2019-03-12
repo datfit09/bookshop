@@ -1553,6 +1553,13 @@ a:hover, a:active {
   flex-grow: 1;
 }
 
+@media (max-width: 375px) {
+  .container_header .site-branding img {
+    max-width: 120px;
+    padding: 10px 0;
+  }
+}
+
 /* Menu nav */
 @media (min-width: 992px) {
   .primary-menu {
@@ -1759,7 +1766,7 @@ a:hover, a:active {
   }
   .site-branding {
     display: block;
-    padding: 20px 0 40px 0;
+    padding: 0;
   }
   #pull {
     position: absolute;
@@ -1778,19 +1785,39 @@ a:hover, a:active {
 }
 
 .search-btn button {
-  border: 1px solid #152639;
-  color: #fff;
-  background-color: #152639;
-  border-radius: 3px;
-  text-align: center;
-  display: flex;
+  margin-left: 30px;
+  display: inline-flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  text-align: center;
+  background: #152639;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 .search-btn button:hover {
-  background-color: #fff;
-  color: #152639;
+  background-color: #14f1e4;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .search-btn {
+    position: absolute;
+    top: 20%;
+    right: 90px;
+    display: block;
+    clear: both;
+  }
+}
+
+@media (max-width: 375px) {
+  .search-btn {
+    top: 37%;
+  }
 }
 
 .modal-open .modal {
@@ -2155,20 +2182,20 @@ a:hover, a:active {
   width: 33%;
 }
 
-.our-blog .blog-post-img {
+.our-blog .sc-blog-image {
   position: relative;
+  overflow: hidden;
 }
 
 .our-blog .blog-info {
   position: absolute;
-  bottom: 71px;
-  right: 15px;
-  height: 55px;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  color: #6c6c6c;
   display: flex;
-  justify-content: center;
-  width: 70%;
+  height: 55px;
   align-items: center;
-  background-color: #fff;
 }
 
 .our-blog .blog-info .blog-date,
@@ -2369,6 +2396,12 @@ a:hover, a:active {
   width: 90% !important;
 }
 
+@media (min-width: 375px) {
+  .testimonial-carousel {
+    width: 100%;
+  }
+}
+
 .elementor-description {
   padding: 30px;
   float: left;
@@ -2434,18 +2467,27 @@ a:hover, a:active {
   width: 270px;
   padding: 40px 20px 20px 20px;
   float: left;
-  margin: 80px 0 !important;
+  margin: 80px 0;
 }
 
 @media (max-width: 375px) {
   .service-box {
-    width: 100% !important;
-    margin: 15px 0 15px 15px !important;
+    margin: 0 0 0 12px !important;
   }
 }
 
 .service_item {
   counter-reset: section;
+}
+
+@media (max-width: 375px) {
+  .service_item button.slick-next.slick-arrow {
+    display: none !important;
+    border: none !important;
+  }
+  .service_item button.slick-next.slick-arrow:before {
+    display: none !important;
+  }
 }
 
 .service-box {
@@ -2495,12 +2537,35 @@ a:hover, a:active {
 .author_item button.slick-prev.slick-prev,
 .author_item button.slick-next.slick-arrow {
   display: none !important;
-  border: none;
+  border: none !important;
 }
 
 .author_item button.slick-prev.slick-prev:before,
 .author_item button.slick-next.slick-arrow:before {
   display: none !important;
+}
+
+/* Dots Service Widget*/
+.service_item .slick-dots {
+  bottom: -15%;
+  flex-direction: row;
+  width: 70%;
+}
+
+.service_item .slick-dots li {
+  margin: 5px;
+}
+
+/* Dots Testimonial Widget*/
+@media (max-width: 375px) {
+  .author_item .slick-dots {
+    bottom: -8%;
+    flex-direction: row;
+    width: 60%;
+  }
+  .author_item .slick-dots li {
+    margin: 5px;
+  }
 }
 
 /*--------------------------------------------------------------
