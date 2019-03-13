@@ -270,6 +270,7 @@
     transition-duration: 0.3s;
     @media( max-width: 375px ) {
         bottom: -90px;
+        left: 0;
     }
     @media( max-width: 1024px ) {
         bottom: -90px;

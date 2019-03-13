@@ -21,17 +21,43 @@
         > li {
             display: inline-flex;
             line-height: 1;
+            &:last-child {
+                .sub-menu{
+                    > li {
+                        &:after {
+                            content: "\f104";
+                            font-family: 'FontAwesome';
+                            font-size: 12px !important;
+                            top: 50%;
+                            transform: translateY( -50% );
+                            line-height: 1 !important;
+                            position: absolute;
+                            left: 10px;
+                            margin-right: 20px;
+                        }
+                        > ul {
+                            transform: translateX( 0 );
+                            left: -100%;
+                        }
+                    }
+                }
+                a{
+                    text-align: right;
+                }
+            }
             > a {
                 padding: 0 20px;
                 line-height: 100px;
                 color: $color__text-menu;
                 text-transform: uppercase;
+                font-family: $font__tittle;
+                font-weight: 600;
                 &:hover {
                     color: $color__link-hover;
                 }
             }
             ul {
-                min-width: 180px;
+                min-width: 120px;
                 opacity: 0;
                 visibility: hidden;
                 position: absolute;
@@ -63,6 +89,8 @@
                     padding: 10px 20px;
                     color: $color__text-menu;
                     text-transform: uppercase;
+                    font-family: $font__tittle;
+                    font-weight: 600;
                     &:hover {
                         color: $color__link-hover;
                     }
@@ -106,6 +134,10 @@
 
     .primary-menu {
         > li {
+            transition-duration: 180ms;
+            &:hover {
+                border-bottom: 3px solid $color__link-hover;
+            }
             &.current-menu-item,
             &.current-menu-ancestor,
             &.current-menu-parent,
@@ -114,6 +146,9 @@
                 a {
                     color: $color__link-hover;
                 }
+            }
+            &.current-menu-item {
+                border-bottom: 3px solid $color__link-hover;
             }
         }
     }
